@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doodles",
+  "info": {
+    "singularName": "doodle",
+    "pluralName": "doodles",
+    "displayName": "Doodle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProgressImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PrimaryImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "LastUpdated": {
+      "type": "datetime"
+    },
+    "Begun": {
+      "type": "date"
+    },
+    "DoodleId": {
+      "type": "uid"
+    },
+    "FeedbackRequested": {
+      "type": "boolean"
+    },
+    "Public": {
+      "type": "boolean"
+    },
+    "Notes": {
+      "type": "richtext"
+    },
+    "Rating": {
+      "type": "integer"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "User"
+    },
+    "reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reference.reference"
+    }
+  }
+}
